@@ -1,3 +1,3 @@
-module github.com/dh1tw/gosamplerate
+module github.com/gameflow-tv/gosamplerate
 
 go 1.19
