@@ -64,7 +64,7 @@ const (
 	SRC_LINEAR              = C.SRC_LINEAR
 )
 
-//New initializes the converter object and returns a reference to it.
+// New initializes the converter object and returns a reference to it.
 func New(converterType int, channels int, bufferLen int) (Src, error) {
 	cConverter := C.int(converterType)
 	cChannels := C.int(channels)
@@ -138,7 +138,7 @@ func Error(errNo int) string {
 	return C.GoString(err)
 }
 
-//ErrorNo return an error number
+// ErrorNo return an error number
 func (src *Src) ErrorNo() int {
 	errNo := C.src_error(src.srcState)
 	return int(errNo)
